@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-4 sm:p-8">
 
-    <div class="text-center mb-10 mt-15">
+    <div class="text-center mb-10 mt-30">
       <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-2">
         PRODUCT CATEGORIES
       </h1>
@@ -28,17 +28,21 @@
               ? 'scale-[1.8] blur-[5px] text-blue-500/50 float-anim' 
               : 'scale-100 blur-0 text-gray-400 group-hover:scale-[1.8] group-hover:blur-[5px] group-hover:text-gray-500 group-hover:float-anim'"
           >
-            <ion-icon :name="category.icon" class="text-7xl text-red-100"></ion-icon>
+            <img 
+              v-if="category.img" 
+              :src="category.img" 
+              alt="category-image" 
+              class="w-24 h-24 sm:w-28 sm:h-28 object-contain drop-shadow-lg"
+            >
           </div>
 
           <div 
             class="relative z-20 flex flex-col items-center justify-center gap-3 transition-opacity duration-300 ease-in-out w-full px-2"
             :class="selectedId === category.id ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'"
           >
-            <p class="font-bold text-lg md:text-xl text-center leading-tight">{{ category.name }}</p>
-            <span class="text-xs text-gray-400 tracking-wider uppercase">Category</span>
+            <p class="font-bold text-lg md:text-xl text-center leading-tight bg-white/75 rounded-md text-black p-2">{{ category.name }}</p>
             
-            <p v-if="selectedId === category.id" class="text-sm font-bold text-red-400 mt-2">
+            <p v-if="selectedId === category.id" class="text-xs font-bold text-red-700 mt-2 bg-white/50 rounded-md p-2">
               Selected ✓
             </p>
           </div>
@@ -51,8 +55,9 @@
     <div class="mt-10 h-12">
       <transition name="fade">
         <button 
-          v-if="selectedId"
-          class="inline-flex items-center justify-center rounded uppercase font-bold px-8 text-white h-12 text-sm tracking-[1.2px] transition-all bg-linear-to-r from-red-600 to-red-400 hover:shadow-lg hover:shadow-blue-500/30 cursor-pointer"
+            v-if="selectedId"
+            @click="goToSubCategory"
+            class="inline-flex items-center justify-center rounded uppercase font-bold px-8 text-white h-12 text-sm tracking-[1.2px] transition-all bg-linear-to-r from-black to-red-600 hover:shadow-lg hover:shadow-red-500/30 cursor-pointer"
         >
           Continue
           <ion-icon name="arrow-forward-outline" class="ml-2 text-lg"></ion-icon>
@@ -65,25 +70,40 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
 const selectedId = ref<number | null>(null);
 
 const categories = ref([
-  { id: 1, name: 'Tech & Gadgets', icon: 'hardware-chip-outline' },
-  { id: 2, name: 'Fashion', icon: 'shirt-outline' },
-  { id: 3, name: 'Home & Living', icon: 'home-outline' },
-  { id: 4, name: 'Health & Beauty', icon: 'sparkles-outline' },
-  { id: 5, name: 'Sports & Fitness', icon: 'barbell-outline' },
-  { id: 6, name: 'Gaming', icon: 'game-controller-outline' },
-  { id: 7, name: 'Automotive', icon: 'car-sport-outline' },
-  { id: 8, name: 'Outdoors', icon: 'leaf-outline' },
-  { id: 9, name: 'Pets', icon: 'paw-outline' },
-  { id: 10, name: 'Everyday Needs', icon: 'basket-outline' }
+  { id: 1, name: 'Tech & Gadgets', img: '/category-icons/tech.png' },
+  { id: 2, name: 'Fashion', img: '/category-icons/fashion.png' },
+  { id: 3, name: 'Home & Living', img: '/category-icons/home.png' },
+  { id: 4, name: 'Health & Beauty', img: '/category-icons/beauty.png' },
+  { id: 5, name: 'Sports & Fitness', img: '/category-icons/fitness.png' },
+  { id: 6, name: 'Gaming', img: '/category-icons/gaming.png' },
+  { id: 7, name: 'Automotive', img: '/category-icons/automotive.png' },
+  { id: 8, name: 'Outdoors', img: '/category-icons/outdoors.png' },
+  { id: 9, name: 'Pets', img: '/category-icons/pets.png' },
+  { id: 10, name: 'Everyday Needs', img: '/category-icons/everyday.png' }
 ]);
 
 const selectCategory = (id: number) => {
   selectedId.value = id;
 };
+
+const goToSubCategory = () => {
+    if (selectedId.value) {
+      const selectedCategory = categories.value.find(cat => cat.id === selectedId.value);
+      
+      if (selectedCategory) {
+        localStorage.setItem('category_name', selectedCategory.name);
+      }
+
+        router.push(`sub-category-page/${selectedId.value}`);
+    }
+};
+
 </script>
 
 <style scoped>
