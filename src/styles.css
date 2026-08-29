@@ -1,10 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap');
-
 
 @theme {
-
-  --font-sans: 'Plus Jakarta Sans', sans-serif;
-
+  --font-sans: 'Raleway', sans-serif;
   --font-cursive: 'Dancing Script', cursive;
 }

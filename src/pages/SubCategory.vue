@@ -219,10 +219,10 @@ const goToFinalPage = () => {
     const selectedSubCategory = activeSubCategories.value.find(sub_cat => sub_cat.id === selectedSubId.value);
   
     if (selectedSubCategory) {
-      localStorage.setItem('sub_category_name', selectSubCategory.name);
+      localStorage.setItem('sub_category_name', selectedSubCategory.name);
     }
 
-    router.push(`submission-page`);
+    router.push(`/submission-page`);
   }
 }
 
