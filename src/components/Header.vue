@@ -13,7 +13,7 @@
           Get Started
       </router-link>
       <a href="" class="hover:text-red-700">
-        <ion-icon name="notifications-circle-outline" class="text-4xl"></ion-icon>
+        <img src="/history.png" class="w-6 h-6 hover:text-red-700" alt="history">
       </a>
     </div>
 
