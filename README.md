@@ -1,6 +1,6 @@
 RECOM
 
-![CENTRE preview](public/recom-cover.png)
+![CENTRE preview](public/recom.png)
 
 ## Recommended IDE Setup
 
