@@ -12,7 +12,7 @@
       <router-link to="/category-page" class="inline-flex items-center justify-center rounded uppercase px-6.25 text-white h-10 text-sm leading-3.5 tracking-[1.2px] transition-all duration-200 delay-100 bg-linear-to-r from-[#1c1c1c] to-red-600 border-0 overflow-hidden cursor-pointer hover:duration-300 hover:ease-in hover:delay-0 hover:px-7.5 [clip-path:polygon(0_0,0_0,100%_0,100%_0,100%_calc(100%-15px),calc(100%-15px)_100%,15px_100%,0_100%)]">
           Get Started
       </router-link>
-      <a href="" class="hover:text-red-700">
+      <a href="/products-page" class="hover:text-red-700">
         <img src="/history.png" class="w-6 h-6 hover:text-red-700" alt="history">
       </a>
     </div>

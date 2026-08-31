@@ -1,6 +1,6 @@
-# ai-product-discovery-engine
+RECOM
 
-This template should help get you started developing with Vue 3 in Vite.
+![CENTRE preview](public/recom-cover.png)
 
 ## Recommended IDE Setup
 
