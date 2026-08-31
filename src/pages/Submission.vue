@@ -1,6 +1,7 @@
 <template>
     <div class="min-h-screen bg-white bg-[radial-gradient(ellipse_at_bottom_left,rgba(248,113,113,0.25)_0%,transparent_55%),radial-gradient(ellipse_at_bottom_right,rgba(248,113,113,0.25)_0%,transparent_55%)] flex items-center justify-center p-4 sm:p-8">
-        <div class="flex flex-col md:flex-row w-full max-w-5xl gap-6">
+        
+        <div class="flex flex-col md:flex-row w-full max-w-5xl gap-6 mt-25 sm:mt-0">
             <div class="flex-1 bg-white rounded-[20px] p-8 shadow-xl shadow-black/20 border border-gray-100">
                 <h2 class="text-2xl font-bold text-gray-900 mb-3">Informations / Helper</h2>
                 <p class="text-sm mb-2 mt-5 flex items-center gap-1">
@@ -167,8 +168,6 @@ const startGeneratingRecommendations = async () => {
         isLoading.value = false;
     }
 }
-
-
 
 
 </script>
