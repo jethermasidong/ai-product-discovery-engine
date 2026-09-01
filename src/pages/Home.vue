@@ -141,21 +141,12 @@
         <div class="w-full md:w-1/2 flex justify-center md:justify-end">
           <div class="flex flex-col gap-5 group mx-2 cursor-pointer">
             
-            <div class="w-56 sm:w-56 aspect-square items-center justify-center flex rounded-3xl border border-gray-100 shadow-lg overflow-visible">
+            <div class="w-56 sm:w-86 aspect-square items-center justify-center flex rounded-3xl border border-gray-100 shadow-lg overflow-visible bg-white">
               <img 
                 src="/logo.png" 
                 alt="Logo" 
                 class="w-56 sm:w-60 object-contain transition-all duration-700 ease-in-out group-hover:duration-1000 cursor-pointer group-hover:scale-110 sm:group-hover:scale-125 rotate-0 group-hover:rotate-[-360deg] group-hover:-translate-y-8 group-hover:-skew-y-6 group-hover:skew-x-6"
               >
-            </div>
-
-            <div class="flex flex-row place-items-center place-content-between px-2">
-              <div class="flex flex-col gap-1">
-                <p class="font-bold text-xl sm:text-2xl relative after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:absolute after:origin-bottom-left after:transform after:ease-in-out after:duration-500 cursor-pointer w-full after:w-full group-hover:after:scale-x-100 group-hover:after:origin-bottom-left after:bg-red-600 text-gray-800 group-hover:text-red-600 transition-colors">
-                  RECOM
-                </p>
-                <p class="text-sm text-gray-500">AI Product Discovery Agent</p>
-              </div>
             </div>
           </div>
         </div>

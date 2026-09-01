@@ -54,7 +54,7 @@
         <button 
           v-if="selectedSubId"
           @click="goToFinalPage"
-          class="inline-flex items-center justify-center rounded uppercase font-bold px-8 text-white h-12 text-sm tracking-[1.2px] transition-all bg-linear-to-r from-black to-red-600 hover:shadow-lg hover:shadow-red-500/30 cursor-pointer"
+          class="fixed bottom-10 left-1/2 -translate-x-1/2 z-50 inline-flex items-center justify-center rounded uppercase font-bold px-8 text-white h-12 text-sm tracking-[1.2px] transition-all bg-linear-to-r from-black to-red-600 hover:shadow-lg hover:shadow-red-500/30 cursor-pointer"
         >
           Next Step
           <ion-icon name="arrow-forward-outline" class="ml-2 text-lg"></ion-icon>

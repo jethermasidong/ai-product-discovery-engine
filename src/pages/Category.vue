@@ -55,9 +55,9 @@
     <div class="mt-10 h-12">
       <transition name="fade">
         <button 
-            v-if="selectedId"
-            @click="goToSubCategory"
-            class="inline-flex items-center justify-center rounded uppercase font-bold px-8 text-white h-12 text-sm tracking-[1.2px] transition-all bg-linear-to-r from-black to-red-600 hover:shadow-lg hover:shadow-red-500/30 cursor-pointer"
+          v-if="selectedId"
+          @click="goToSubCategory"
+          class="fixed bottom-10 left-1/2 -translate-x-1/2 z-50 inline-flex items-center justify-center rounded uppercase font-bold px-8 text-white h-12 text-sm tracking-[1.2px] transition-all bg-linear-to-r from-black to-red-600 shadow-xl hover:shadow-2xl hover:shadow-red-500/40 cursor-pointer"
         >
           Continue
           <ion-icon name="arrow-forward-outline" class="ml-2 text-lg"></ion-icon>
